@@ -1,0 +1,55 @@
+@import '../../assets/styles/shared-styles.scss';
+
+.left-menu {
+  flex-basis: 250px;
+  max-width: 250px;
+  background-color: $white;
+  padding: 30px;
+  padding-right: 0;
+  border: 1px solid $grey-border;
+  border-top: none;
+  border-bottom: none;
+  position: relative;
+
+  &__title {
+    margin-bottom: 2rem;
+  }
+}
+
+.categories {
+
+  &__item {
+    list-style: none;
+    font-size: 15px;
+    margin-bottom: .7rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &.active {
+      .categories__link {
+        color: $corp-green;
+      }
+    }
+  }
+
+  &__link {
+    text-transform: lowercase;
+    transition: color .1s ease;
+    color: $dark-text;
+    background: none;
+    border: none;
+    cursor: pointer;
+
+    &::first-letter {
+      text-transform: uppercase;
+    }
+
+    &:hover {
+      color: $corp-green;
+    }
+
+
+  }
+}

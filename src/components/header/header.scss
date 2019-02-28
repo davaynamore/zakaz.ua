@@ -1,0 +1,26 @@
+@import '../../assets/styles/shared-styles.scss';
+
+@font-face {
+  font-family: 'TT Norms';
+  src: url('../../assets/fonts/TTNorms-Regular.otf') format("opentype");
+}
+
+.top-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: $corp-green;
+
+  &__logo {
+
+    &-link {
+      text-transform: uppercase;
+      font-size: 22px;
+      font-weight: bold;
+      letter-spacing: 1px;
+      color: $white;
+      font-family: 'TT Norms';
+    }
+  }
+}

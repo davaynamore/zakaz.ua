@@ -1,0 +1,88 @@
+@import '../../assets/styles/shared-styles.scss';
+
+.product {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 30px;
+  background-color: $bg-color;
+  position: relative;
+  min-height: 100vh;
+
+  &__title {
+    margin-bottom: 2rem;
+    font-size: 36px;
+    text-transform: lowercase;
+    transition: color .1s ease;
+    color: $dark-text;
+    align-self: flex-start;
+
+    &::first-letter {
+      text-transform: uppercase;
+    }
+  }
+
+  $itemWidth: 225px;
+  $itemHeight: 345px;
+
+  &__grid {
+    display: inline-block;
+  }
+
+  &-item {
+    min-width: $itemWidth;
+    max-width: $itemWidth;
+    min-height: $itemHeight;
+    max-height: $itemHeight;
+    overflow: hidden;
+    border: 1px solid $grey-border;
+    background-color: $white;
+    padding: #{$itemPadding}px;
+    display: inline-flex;
+    flex-direction: column;
+    scroll-behavior: auto;
+    cursor: pointer;
+    position: relative;
+
+    &__img {
+      text-align: center;
+      padding-top: 150px;
+      margin-bottom: 4rem;
+      position: relative;
+
+      &>* {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        object-fit: cover;
+      }
+    }
+
+    &__price {
+      font-size: 18px;
+      margin-bottom: .5rem;
+    }
+
+    &__currency {
+      margin-left: .3rem;
+      font-size: 12px;
+    }
+
+    &__title {
+      line-height: 1.4;
+      margin-bottom: .5rem;
+    }
+
+    &__weight {
+      color: $light-grey;
+      align-self: flex-end;
+    }
+
+    &:hover [class="order__form"] {
+      display: block;
+    }
+  }
+}

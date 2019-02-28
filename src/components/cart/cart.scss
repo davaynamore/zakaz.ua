@@ -1,0 +1,35 @@
+@import '../../assets/styles/shared-styles.scss';
+
+.cart {
+  border: none;
+  border-radius: 20px;
+  color: $white;
+  background-color: $light-green;
+  padding: 10px;
+  display: inline-block;
+  cursor: pointer;
+
+  &__icon {
+    $size: 15px;
+    display: inline-block;
+    min-width: $size;
+    min-height: $size;
+    background: url('../../assets/img/cart.svg') no-repeat center;
+    background-size: 80%;
+    position: relative;
+    margin-right: 1rem;
+  }
+}
+
+.goods__count {
+  background-color: $corp-orange;
+  border: 2px solid $light-green;
+  border-radius: 20px;
+  font-size: 8px;
+  padding: 2px;
+  font-weight: 500;
+  color: $dark-text;
+  position: absolute;
+  top: -5px;
+  left: 10px;
+}

@@ -1,0 +1,72 @@
+@import '../../assets/styles/shared-styles.scss';
+
+.order__form {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: calc(100% - #{$itemPadding*2}px);
+  display: none;
+
+  .counter {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: .5rem;
+
+    $size: 40;
+
+    &__btn {
+      min-height: #{$size}px;
+      min-width: #{$size}px;
+      border-radius: 50%;
+      background-color: $white;
+      outline: none;
+    }
+
+    &__field {
+      min-height: #{$size}px;
+      max-width: #{$size*2}px;
+      border-radius: 25px;
+      border: 1px solid $grey-border;
+      text-align: center;
+      outline: none;
+    }
+  }
+
+  .btn {
+    border: 1px solid $corp-green;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color .1s ease;
+    display: flex;
+    justify-content: center;
+
+    &:hover {
+      background-color: $corp-green;
+      color: $white;
+    }
+
+  }
+
+  &-btn {
+    border-radius: 20px;
+    background-color: $corp-green;
+    color: $white;
+    width: 100%;
+
+    &:hover {
+      background-color: lighten($corp-green, 20%) !important;
+      border-color: lighten($corp-green, 20%);
+    }
+
+    &>* {
+      $size: 15px;
+      width: $size;
+      height: $size;
+      margin-left: .5rem;
+      display: inline-block;
+      background: url('../../assets/img/cart.svg') no-repeat center;
+    }
+  }
+
+
+}
