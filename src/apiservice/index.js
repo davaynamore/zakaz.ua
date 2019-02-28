@@ -33,7 +33,6 @@ export default class ApiService {
 
   transformProducts = (data) => {
     return data.results.map(el => {
-      console.log(el);
       const img = el.img.s150x150 || 'https://via.placeholder.com/150/cccccc/ffffff?text=Image+:-)'
       return {
         ean: el.ean,
